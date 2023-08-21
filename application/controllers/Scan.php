@@ -42,6 +42,6 @@ class Scan extends CI_Controller
         $result_code = $this->input->post('id_qr');
 
         // echo $result_code;
-        redirect(base_url() . "" . $result_code);
+        redirect($result_code);
     }
 }

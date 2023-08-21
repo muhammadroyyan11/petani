@@ -282,7 +282,7 @@ class Dashboard extends CI_Controller
 	{
 		if ($data) {
 			$filename = 'qr/' . $data . ".png";
-			$nameQr = $data . ".png";
+			$nameQr = base_url().$data . ".png";
 			if (!file_exists($filename)) {
 				$this->load->library('ciqrcode');
 				$params['data'] = $data;
