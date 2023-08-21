@@ -282,10 +282,10 @@ class Dashboard extends CI_Controller
 	{
 		if ($data) {
 			$filename = 'qr/' . $data . ".png";
-			$nameQr = base_url().$data . ".png";
+			$nameQr = $data . ".png";
 			if (!file_exists($filename)) {
 				$this->load->library('ciqrcode');
-				$params['data'] = $data;
+				$params['data'] = base_url().$data;
 				$params['level'] = 'H';
 				$params['size'] = 10;
 				$params['savename'] = FCPATH . 'qr/' . $data . ".png";
